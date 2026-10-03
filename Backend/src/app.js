@@ -7,21 +7,14 @@ if (process.env.NODE_ENV !== "production") {
 import express from "express";
 const app = express();
 
-import mongoose from "mongoose";
-
 import path from "path";
 import methodOverride from "method-override";
 
-import ExpressError from "./utils/ExpressError.js";
 import session from "express-session";
-
-import MongoStore from "connect-mongo";
 
 import flash from "connect-flash";
 import passport from "passport";
-import LocalStrategy from "passport-local";
 
-import User from "./models/user.model.js";
 import listingRouter from "./routes/listing.route.js";
 import reviewRouter from "./routes/review.route.js";
 import userRouter from "./routes/user.route.js";
